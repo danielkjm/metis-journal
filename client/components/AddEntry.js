@@ -5,28 +5,88 @@ import { Link } from 'react-router-dom';
 export default class AddEntry extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      title: '',
+      name: '',
+      date: '',
+      entry: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  async handleSubmit(event) {
+    event.preventDefault();
+    const entry = {
+      title: this.state.title,
+      author: this.state.author,
+      date: this.state.date,
+      entry: this.state.entry
+    };
+
+    await axios.post('/api/entries', this.state);
+
+    this.setState({
+      title: '',
+      name: '',
+      date: '',
+      entry: '',
+      created: 'Entry Created!'
+    });
+  }
+
+  handleChange(event) {
+    event.preventDefault();
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    // this.state.planet.createPlanet(event.target.value)
   }
 
   render() {
     return (
       <div className="form-page">
+        <Link to="/">
+          <div className="back-arrow">&#60;</div>
+        </Link>
+        <div className="page-header">CREATE AN ENTRY</div>
         <form className="entry-form" onSubmit={this.handleSubmit}>
-          <div className="entry-section">
-            <label>Title</label>
-            <input
-              name="name"
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
+          <div className="name-title">
+            <div className="entry-section">
+              <label>Title</label>
+              <input
+                name="title"
+                type="text"
+                value={this.state.title}
+                onChange={this.handleChange}
+              />
+            </div>
+
+            <div className="entry-section">
+              <label>Name</label>
+              <input
+                name="name"
+                type="text"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="entry-section">
+              <label>Date</label>
+              <input
+                name="date"
+                type="text"
+                value={this.state.date}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div className="entry-section">
             <label>Entry</label>
             <textarea
-              name="name"
+              name="entry"
               type="text"
-              value={this.state.name}
+              value={this.state.entry}
               onChange={this.handleChange}
             />
           </div>
