@@ -118,10 +118,11 @@
 
 .entry-section {
   display: flex;
+  position: relative;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  top: 80px;
 }
 
 textarea {
@@ -149,18 +150,33 @@ input {
 
 button {
   padding: 20px;
-  margin-top: 20%;
+
   font-family: 'Quicksand', sans-serif;
   color: rgb(58, 58, 58);
   border-radius: 15px;
   font-size: 20px;
   background-color: white;
   cursor: pointer;
+  position: relative;
+}
+
+.submit-button {
+  position: relative;
+  top: 120px;
+  margin-bottom: 5rem;
 }
 
 .name-title {
   display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  top: 30px;
+  align-items: center;
+}
+
+.name-title div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 

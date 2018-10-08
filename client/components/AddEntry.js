@@ -51,7 +51,7 @@ export default class AddEntry extends Component {
         <div className="page-header">CREATE AN ENTRY</div>
         <form className="entry-form" onSubmit={this.handleSubmit}>
           <div className="name-title">
-            <div className="entry-section">
+            <div>
               <label>Title</label>
               <input
                 name="title"
@@ -61,7 +61,7 @@ export default class AddEntry extends Component {
               />
             </div>
 
-            <div className="entry-section">
+            <div>
               <label>Name</label>
               <input
                 name="author"
@@ -70,7 +70,7 @@ export default class AddEntry extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="entry-section">
+            <div>
               <label>Date</label>
               <input
                 name="date"
@@ -89,7 +89,7 @@ export default class AddEntry extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="submit-button">
             <button type="submit">Add</button>
           </div>
         </form>

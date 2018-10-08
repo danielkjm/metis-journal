@@ -17,7 +17,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
-        <div className="title">Everybody's Journal</div>
+        <div className="title">The Journal</div>
         <div className="entry-functions">
           <Link to="/addEntry">
             <div className="add-entry">Add Entry</div>
