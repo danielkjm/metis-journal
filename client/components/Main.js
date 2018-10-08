@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Home from './Home.js';
 import axios from 'axios';
 
 class Main extends Component {
@@ -8,7 +10,13 @@ class Main extends Component {
   }
 
   render() {
-    return <div />;
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </BrowserRouter>
+    );
   }
 }
 

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+}
+
+.entries {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.entry {
+  padding: 30px;
+  width: 100%;
+  border: 1px rgb(58, 58, 58) solid;
+}

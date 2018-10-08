@@ -15,7 +15,7 @@ const Entry = db.define('entry', {
     allowNull: false,
     validate: { notEmpty: true }
   },
-  description: {
+  entry: {
     type: Sequelize.TEXT
   }
 });
