@@ -8,7 +8,8 @@ const Entry = db.define('entry', {
     validate: { notEmpty: true }
   },
   author: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   date: {
     type: Sequelize.STRING,

@@ -25,11 +25,13 @@ export default class Home extends Component {
           <div className="entries">
             {this.state.entries.map(entry => {
               return (
-                <div key={entry.title} className="entry">
-                  <div className="entry-title">"{entry.title}" </div>
-                  <div> - {entry.author}</div>
-                  <div>{entry.date}</div>
-                </div>
+                <Link key={entry.title} to={`entries/${entry.id}`}>
+                  <div className="entry">
+                    <div className="entry-title">"{entry.title}" </div>
+                    <div> - {entry.author}</div>
+                    <div>{entry.date}</div>
+                  </div>
+                </Link>
               );
             })}
           </div>

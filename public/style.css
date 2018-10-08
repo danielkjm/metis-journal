@@ -51,6 +51,10 @@
   flex-direction: column;
 }
 
+.entries a {
+  text-decoration: none;
+}
+
 .entry {
   cursor: pointer;
   display: flex;
@@ -61,6 +65,7 @@
   border-width: 1px 1px 0 1px;
   border-color: rgb(58, 58, 58);
   border-style: solid;
+  color: black;
 }
 
 .entry-title {
@@ -157,4 +162,28 @@ button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.entry-box {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(58, 58, 58);
+  font-size: 20px;
+  margin: 8% 20% 20% 20%;
+}
+
+.entry-box-title {
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(58, 58, 58);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.entry-box div {
+  margin: 20px;
 }

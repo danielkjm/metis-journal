@@ -7,7 +7,7 @@ export default class AddEntry extends Component {
     super();
     this.state = {
       title: '',
-      name: '',
+      author: '',
       date: '',
       entry: ''
     };
@@ -28,7 +28,7 @@ export default class AddEntry extends Component {
 
     this.setState({
       title: '',
-      name: '',
+      author: '',
       date: '',
       entry: '',
       created: 'Entry Created!'
@@ -40,7 +40,6 @@ export default class AddEntry extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    // this.state.planet.createPlanet(event.target.value)
   }
 
   render() {
@@ -65,9 +64,9 @@ export default class AddEntry extends Component {
             <div className="entry-section">
               <label>Name</label>
               <input
-                name="name"
+                name="author"
                 type="text"
-                value={this.state.name}
+                value={this.state.author}
                 onChange={this.handleChange}
               />
             </div>
@@ -94,12 +93,6 @@ export default class AddEntry extends Component {
             <button type="submit">Add</button>
           </div>
         </form>
-
-        {
-          <h4>
-            {this.state.created === undefined ? null : this.state.created}
-          </h4>
-        }
       </div>
     );
   }
